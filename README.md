@@ -5,7 +5,7 @@ View original https://material.uplabs.com/posts/material-color-picker
 # Building a Material Color Picker with Sencha ExtJS (modern)
 
 Visit the live example in https://yosa.github.io/melisa-pens-material-color-picker/
-or edit http://codepen.io/yosa/full/LxEYML/
+or edit http://codepen.io/yosa/full/YNyXxg/
 
 # Screenshot
 
