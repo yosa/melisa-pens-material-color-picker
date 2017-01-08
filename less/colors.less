@@ -21,12 +21,22 @@
         border-radius: 0.25em;
         min-height: 76px;
         font-family: "Roboto Mono", monospace;
+        font-weight: bold;
         
         transition: transform 250ms;
         cursor: pointer;
         
         &:hover {
             transform: scale(1.05);
+        }
+        
+        @-moz-document url-prefix() {
+            .fix-firefox
+            {
+                position: absolute;
+                right: 10px;
+                top: 40%;
+            }
         }
         
     }
