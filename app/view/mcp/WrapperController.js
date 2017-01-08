@@ -27,8 +27,7 @@ Ext.define('Melisa.pens.view.mcp.WrapperController', {
     
         if( lastCopied) {
             
-            lastCopied.data.field1.copied = false;
-            lastCopied.save();
+            lastCopied.removeCls('js-copied');
             me.setLastCopied(null);
             
         }
@@ -38,18 +37,15 @@ Ext.define('Melisa.pens.view.mcp.WrapperController', {
     onItemtapColors: function(dv, index, dom, record) {
         
         var me = this,
-            lastCopied = me.getLastCopied();
-        
-        if( !lastCopied) {
-            me.setLastCopied(record);
-        } else {
-            lastCopied.data.field1.copied = false;
-//            lastCopied.save();
-            me.setLastCopied(record);
+            lastCopied = me.getLastCopied(),
+            $copiedIndicator = dom.el.down('.copied-indicator');
+    
+        if( lastCopied) {
+            lastCopied.removeCls('js-copied');
         }
         
-        record.data.field1.copied = true;
-//        record.save();
+        me.setLastCopied($copiedIndicator);
+        $copiedIndicator.addCls('js-copied');
         
         new Clipboard(dom.el.down('.wrapper').dom);
         

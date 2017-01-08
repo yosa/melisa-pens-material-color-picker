@@ -6,8 +6,8 @@ Ext.define('Melisa.pens.view.mcp.Colors', {
     itemTpl: [
         '<div class="wrapper" style="background: {field1.hex}" data-clipboard-text="{field1.hex}">',
             '<span>{field1.weight}</span>',
-            '<span>{field1.hex}</span>',
-            '<span class="copied-indicator {[values.field1.copied ? "js-copied" : ""]}">Color copied!</span>',
+            '<span class="fix-firefox">{field1.hex}</span>',
+            '<span class="copied-indicator">Color copied!</span>',
         '</div>'
     ],
     bind: {
