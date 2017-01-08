@@ -1,0 +1,71 @@
+.colors
+{
+    border-radius: 0 0.5em 0.5em 0;
+    
+    /* hide scroll over efect */
+    .x-inner
+    {
+        overflow-y: hidden;
+    }
+    
+    .wrapper
+    {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 1;
+        
+        margin: 0.25em 0;
+        padding: 4px 16px;
+        border-radius: 0.25em;
+        min-height: 76px;
+        font-family: "Roboto Mono", monospace;
+        
+        transition: transform 250ms;
+        cursor: pointer;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+        
+    }
+    
+    .x-listitem-body
+    {
+        padding: 0 24px;
+    }
+    
+    .x-listitem.x-hovered
+    {
+        background: transparent;
+    }
+    
+    .copied-indicator
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        opacity: 0;
+        transition: all 250ms;
+
+        &.js-copied {
+            transform: translate(-50%, -50%);
+            opacity: 0.75;
+        }
+        
+    }
+    
+}
+
+.header .x-innerhtml
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-weight: 400;
+    color: #757575;
+    font-size: 24px;
+    padding: 24px;
+}

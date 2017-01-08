@@ -1,0 +1,52 @@
+.color-selector
+{
+    border-right: 0.25em solid #E0E0E0;
+    border-radius: 0.5em 0 0 0.5em;
+
+    label
+    {
+        position: relative;
+        display: inline-block;
+        padding: 0.75em 1.5em;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0.75em;
+            background-color: currentColor;
+            border-radius: 50%;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            padding: 0.5em;
+            border: 0.25em solid;
+            border-radius: 50%;
+
+            transition: padding 250ms;
+        }
+        
+    }
+
+}
+
+.x-listitem.x-listitem.x-selected
+{
+    background: transparent;
+}
+
+.x-selected 
+{
+    
+    label:after
+    {
+        padding: 1em;
+    }
+}
